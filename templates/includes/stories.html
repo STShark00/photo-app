@@ -1,0 +1,12 @@
+<section id="story_panel">
+    
+    {% for story in stories %}
+        <div class="story">
+            <div class="profile_image">
+                <img src="{{story.get('user').get('profile_url')}}" alt="{{story.get('user').get('username')}}'s profile picture">
+            </div>
+            <h5>{{story.get('user').get('username')}}</h5>
+        </div>
+    {% endfor %}
+
+</section>
