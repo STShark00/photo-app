@@ -189,7 +189,7 @@ const displayModalComments = comments => {
 
 const destroyModal = ev => {
     document.querySelector('#modal-container').innerHTML = "";
-    document.getElementById("viewAllComments").focus();
+    document.getElementById("viewAllComments-${ postID }").focus();
 };
 
 const showPostDetail = ev => {
@@ -261,7 +261,7 @@ const displayComments = (comments, postID) => {
     let html = '';
     if (comments.length > 1) {
         html += `
-            <button class="link" id="viewAllComments" data-post-id="${ postID }"onclick="showPostDetail(event)">
+            <button class="link" id="viewAllComments-${ postID }" data-post-id="${ postID }"onclick="showPostDetail(event)">
                 view all ${ comments.length } comments
             </button>
         `;
