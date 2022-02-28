@@ -1,0 +1,25 @@
+<aside id="rec_panel">
+    <section id="rec_curr_user">
+        <div class="profile_image">
+            <img src="{{user.get('profile_url')}}" alt="{{user.get('username')}}'s profile picture"/>
+        </div>              
+        <h1 style="font-size:30px;text-align:center">{{user.get('username')}}</h1>
+    </section>
+    <section id="suggestion_box">
+        <h2 style="font-size:15px;text-align:center">Suggestions for you</h2>
+
+        {% for sugg_user in suggestions %}
+            <div class="suggest_user">
+                <div class="profile_image">
+                    <img src="{{sugg_user.get('profile_url')}}" alt="{{sugg_user.get('username')}}'s profile picture"/>
+                </div>  
+                <section id="suggest_user_name">
+                    <h4>{{sugg_user.get('username')}}</h4>
+                    <h6>suggested for you</h6>
+                </section>
+                <a href="#" class="blue">follow</a>
+            </div>
+        {% endfor %}
+        
+    </section>
+</aside>
